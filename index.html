@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./brand.png" type="image/x-icon">
+    <title>LUXEORA BEAUTY | High-Performance Cosmetics</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body class="font-sans text-countdown bg-slate-50 antialiased selection:bg-celebration selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-countdown text-white text-xs py-2 px-4 flex flex-col md:flex-row justify-between items-center font-medium tracking-wide border-b border-sky/20">
+        <div class="flex items-center gap-2 mb-1 md:mb-0">
+            <i class="fa-solid fa-truck text-ice"></i>
+            <span>FREE SHIPPING ON ORDERS OVER $50</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-tags text-celebration"></i>
+            <span>30% OFF YOUR FIRST ORDER | USE CODE: <strong class="text-ice">LUX34</strong></span>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- BRAND LOGO -->
+                 <span class="w-30"><img src="./brand.png" alt="brand logo"></span>
+                <a href="http://0.0.0.0:1102/#" class="flex flex-col group">
+                    
+                    <span class="font-serif text-2xl md:text-3xl font-bold tracking-widest text-countdown group-hover:text-carols transition-colors name1">LUXEORA</span>
+                    <span class="text-[9px] tracking-[0.3em] font-bold text-sky uppercase -mt-1 name2">B E A U T Y</span>
+                </a>
+
+                <!-- NAVIGATION LINKS -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold tracking-wider text-countdown">
+                    <a href="#new-in" class="hover:text-carols transition-colors py-1 border-b-2 border-transparent hover:border-carols">NEW IN</a>
+                    <a href="#categories" class="hover:text-carols transition-colors py-1 border-b-2 border-transparent hover:border-carols">MAKEUP</a>
+                    <a href="#bestsellers" class="hover:text-carols transition-colors py-1 border-b-2 border-transparent hover:border-carols">BEST SELLERS</a>
+                    <a href="#sale" class="text-carols hover:text-celebration transition-colors py-1 border-b-2 border-transparent hover:border-celebration font-bold">SALE</a>
+                </div>
+
+                <!-- CART BUTTON -->
+                <div class="flex items-center space-x-4">
+                    <button id="cart-toggle" class="relative bg-countdown text-white hover:bg-carols transition-colors px-5 py-2.5 rounded-full flex items-center space-x-3 shadow-md hover:shadow-lg">
+                        <i class="fa-solid fa-bag-shopping text-ice"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add to Cart</span>
+                        <span id="cart-count" class="bg-celebration text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER (SLIDING BACKGROUND) -->
+    <section class="relative h-[600px] md:h-[700px] overflow-hidden bg-countdown text-white">
+        <!-- Slide 1 -->
+        <div class="hero-slide absolute inset-0 opacity-100 bg-cover bg-center transition-opacity duration-1000" style="background-image: linear-gradient(to right, rgba(55, 64, 87, 0.85), rgba(55, 64, 87, 0.3)), url('./back\ 1.jpeg');"></div>
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 opacity-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: linear-gradient(to right, rgba(55, 64, 87, 0.85), rgba(55, 64, 87, 0.3)), url('./back\ 2.jpeg');"></div>
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 opacity-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: linear-gradient(to right, rgba(55, 64, 87, 0.85), rgba(55, 64, 87, 0.3)), url('./back\ 3.jpeg');"></div>
+
+        <!-- Overlay content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-start">
+            <span class="inline-block px-3 py-1 bg-ice/20 text-ice border border-ice/30 rounded-full text-xs font-bold tracking-widest uppercase mb-4">NEW COLLECTION</span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4 drop-shadow-sm">
+                Makeup That <br>
+                <span class="text-celebration">Empowers You</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-md font-light leading-relaxed">
+                High-performance beauty <br> to every you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#bestsellers" class="bg-carols hover:bg-celebration text-white px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center">SHOP NOW</a>
+                <a href="#categories" class="bg-transparent border-2 border-white hover:bg-white hover:text-countdown text-white px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase transition-all text-center">EXPLORE COLLECTION</a>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-6 right-8 flex space-x-2 z-10">
+            <button class="slide-indicator w-3 h-3 rounded-full bg-white opacity-100" onclick="setSlide(0)"></button>
+            <button class="slide-indicator w-3 h-3 rounded-full bg-white opacity-40" onclick="setSlide(1)"></button>
+            <button class="slide-indicator w-3 h-3 rounded-full bg-white opacity-40" onclick="setSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- VALUE PROPOSITION BAR -->
+     <section class="bg-white border-b border-slate-200 py-8 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- 1: Free Shipping -->
+                <div class="flex flex-col items-center p-2 group">
+                    <div class="w-12 h-12 rounded-full bg-ice/20 flex items-center justify-center text-sky text-xl mb-3 group-hover:bg-sky group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-countdown uppercase tracking-wider">FREE SHIPPING</h4>
+                    <p class="text-xs text-slate-500 mt-1">On orders over $50</p>
+                </div>
+                <!-- 2: Clean & Safe -->
+                <div class="flex flex-col items-center p-2 group">
+                    <div class="w-12 h-12 rounded-full bg-ice/20 flex items-center justify-center text-sky text-xl mb-3 group-hover:bg-sky group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-countdown uppercase tracking-wider">CLEAN & SAFE</h4>
+                    <p class="text-xs text-slate-500 mt-1">Paraben & cruelty free</p>
+                </div>
+                <!-- 3: Secure Payment -->
+                <div class="flex flex-col items-center p-2 group">
+                    <div class="w-12 h-12 rounded-full bg-ice/20 flex items-center justify-center text-sky text-xl mb-3 group-hover:bg-sky group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-countdown uppercase tracking-wider">SECURE PAYMENT</h4>
+                    <p class="text-xs text-slate-500 mt-1">100% secure checkout</p>
+                </div>
+                <!-- 4: Easy Returns -->
+                <div class="flex flex-col items-center p-2 group">
+                    <div class="w-12 h-12 rounded-full bg-ice/20 flex items-center justify-center text-sky text-xl mb-3 group-hover:bg-sky group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-countdown uppercase tracking-wider">EASY RETURNS</h4>
+                    <p class="text-xs text-slate-500 mt-1">30-day hassle free returns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY -->
+    <section id="categories" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-countdown tracking-wide">SHOP BY CATEGORY</h2>
+            <div class="w-16 h-1 bg-carols mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <!-- Category 1: FACE -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('face')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./face.jpeg" alt="Face Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">FACE</h3>
+            </div>
+
+            <!-- Category 2: EYES -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('eyes')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./eye.jpeg" alt="Eyes Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">EYES</h3>
+            </div>
+
+            <!-- Category 3: LIPS -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('lips')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./lip.jpeg" alt="Lips Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">LIPS</h3>
+            </div>
+
+            <!-- Category 4: CHEEKS -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('cheeks')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./cheek.jpeg" alt="Cheeks Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">CHEEKS</h3>
+            </div>
+
+            <!-- Category 5: TOOLS & BRUSHES -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('tools')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./brush.jpeg" alt="Tools Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">TOOLS & BRUSHES</h3>
+            </div>
+
+            <!-- Category 6: MAKEUP KITS -->
+            <div class="group cursor-pointer text-center" onclick="filterCategory('kits')">
+                <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg group-hover:border-carols transition-all transform group-hover:scale-105">
+                    <img src="./kit.jpeg" alt="Kits Category" class="w-full h-full object-cover">
+                    <span class="absolute inset-0 bg-black/20 flex items-center justify-center text-white text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100">LUXEORA</span>
+                </div>
+                <h3 class="font-bold text-sm text-countdown group-hover:text-carols transition-colors tracking-wider">MAKEUP KITS</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS SECTION & DUAL BANNERS -->
+    <section id="bestsellers" class="py-16 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-carols uppercase">Curated Favorites</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-countdown">BEST SELLERS</h2>
+                </div>
+                <button onclick="filterCategory('all')" class="mt-4 md:mt-0 text-sm font-bold text-sky hover:text-countdown transition-colors underline">View All Products</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="face">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./foundation.jpeg" alt="Matte Liquid Foundation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Matte Liquid Foundation', 33.00, './foundation.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Matte Liquid Foundation</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$33.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 ml-1">(4.9)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="lips">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./lipstick.jpeg" alt="Velvet Matte Lipstick" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Velvet Matte Lipstick', 16.00, './lipstick.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Velvet Matte Lipstick</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$16.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-slate-400 ml-1">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="eyes">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./eyeshadow.jpeg" alt="Shimmer Eyeshadow Palette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Shimmer Eyeshadow Palette', 29.00, './eyeshadow.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Shimmer Eyeshadow Palette</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$29.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 ml-1">(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="eyes">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./eyeliner, mascara.jpeg" alt="Volume & Curl Mascara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Volume & Curl Mascara', 15.00, './eyeliner, mascara.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Volume & Curl Mascara</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$15.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-slate-400 ml-1">(4.6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="cheeks">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./blush.jpeg" alt="Cream Blush" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Cream Blush', 23.00, './blush.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Cream Blush</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$23.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 ml-1">(4.8)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="face">
+                    <div class="relative overflow-hidden h-72 bg-slate-50">
+                        <img src="./spray.jpeg" alt="Makeup Setting Spray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-countdown text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">LUXEORA</span>
+                        <button onclick="addToCart('Makeup Setting Spray', 19.00, './spray.jpeg')" class="absolute bottom-4 left-4 right-4 bg-carols text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-celebration">Quick Add</button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-countdown mb-1">Makeup Setting Spray</h3>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-carols font-bold text-lg">$19.00</span>
+                            <div class="text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-slate-400 ml-1">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DUAL PROMOTIONAL BANNERS SECTION -->
+             <div id="sale" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Left Banner: Limited Time Offer -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg h-96 group" id="new-in">
+                    <img src="./offer.jpeg" alt="LUXEORA Makeup Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-countdown/90 via-countdown/60 to-transparent flex flex-col justify-center p-8 text-white">
+                        <span class="text-xs font-bold tracking-widest text-ice uppercase mb-2">LIMITED TIME ONLY</span>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold leading-tight mb-2">
+                            30% OFF <br>
+                            SITEWIDE
+                        </h3>
+                        <p class="text-sm font-medium text-slate-200 mb-6">Use Code: <strong class="text-celebration bg-white/10 px-2 py-0.5 rounded">LUX34</strong></p>
+                        <div>
+                            <a href="#bestsellers" class="inline-block bg-carols hover:bg-celebration text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md">SHOP THE OFFER</a>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Right Banner: LUXEORA Rewards -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg h-96 group">
+                    <img src="./reward.jpeg" alt="LUXEORA Makeup Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-sky/90 via-sky/70 to-transparent flex flex-col justify-center p-8 text-white">
+                        <span class="text-xs font-bold tracking-widest text-ice uppercase mb-2">LUXEORA REWARDS</span>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold leading-tight mb-2">
+                            BEAUTY. REWARDS. <br>
+                            EXCLUSIVELY YOURS.
+                        </h3>
+                        <p class="text-sm text-slate-100 mb-6 max-w-xs">Earn points, unlock perks <br> and enjoy special offer.</p>
+                        <div>
+                            <button onclick="alert('Welcome to Luxeora Rewards program! Details will be sent to your email.')" class="bg-countdown hover:bg-white hover:text-countdown text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md">JOIN NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER / INBOX SECTION -->
+    <section class="bg-ice/30 py-16 border-y border-ice/40" >
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i class="fa-regular fa-envelope text-3xl text-carols mb-4"></i>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-countdown mb-3">BEAUTY IN YOUR INBOX</h2>
+            <p class="text-slate-600 mb-8 max-w-md mx-auto">Subscribe for exclusive offers, new arrivals & tips</p>
+            
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleSubscribe(event)">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address..." required class="flex-grow px-5 py-3.5 rounded-full border border-slate-300 focus:outline-none focus:border-carols text-sm shadow-sm">
+                <button type="submit" class="bg-countdown hover:bg-carols text-white px-8 py-3.5 rounded-full font-bold text-xs tracking-wider uppercase transition-colors shadow-md">SUBSCRIBE</button>
+            </form>
+            <p id="newsletter-msg" class="text-xs font-semibold mt-3 hidden"></p>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-countdown text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                  
+                <div class="space-y-4">
+                    
+                    <a href="#" class="flex flex-inline">
+                       <span><img class=" w-19 brand" src="./brand.png" alt="brand logo"></span>
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white name4">LUXEORA</span>
+                        <span class="text-[8px] tracking-[0.3em] font-bold text-ice uppercase name3">B E A U T Y</span>
+                    </a>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        High-performance makeup <br> designed to enhance your <br> natural beauty and confidence.
+                    </p>
+                    <div class="flex space-x-4 text-ice pt-2"  id="sale">
+                        <a href="#" class="hover:text-celebration transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="#" class="hover:text-celebration transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+                        <a href="#" class="hover:text-celebration transition-colors"><i class="fa-brands fa-tiktok text-lg"></i></a>
+                        <a href="#" class="hover:text-celebration transition-colors"><i class="fa-brands fa-pinterest text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Center Link Column 1: SHOP -->
+                <div>
+                    <h4 class="font-bold text-sm text-ice uppercase tracking-wider mb-4">SHOP</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="#categories" class="hover:text-celebration transition-colors">Face Makeup</a></li>
+                        <li><a href="#categories" class="hover:text-celebration transition-colors">Eye Products</a></li>
+                        <li><a href="#categories" class="hover:text-celebration transition-colors">Lipstick & Gloss</a></li>
+                        <li><a href="#bestsellers" class="hover:text-celebration transition-colors">Best Sellers</a></li>
+                        <li><a href="#sale" class="hover:text-celebration transition-colors">Special Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Center Link Column 2: CUSTOMER CARE -->
+                <div>
+                    <h4 class="font-bold text-sm text-ice uppercase tracking-wider mb-4">CUSTOMER CARE</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="#" class="hover:text-celebration transition-colors">Track Order</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">FAQ & Support</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Center Link Column 3: ABOUT US -->
+                <div>
+                    <h4 class="font-bold text-sm text-ice uppercase tracking-wider mb-4">ABOUT US</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="#" class="hover:text-celebration transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Clean Ingredients</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-celebration transition-colors">Store Locator</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+                <p>&copy; 2026 LUXEORA BEAUTY. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <span>Designed for pure elegance</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CART DRAWER -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+        <!-- Backdrop -->
+        <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" onclick="toggleCart(false)"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col pointer-events-auto transform transition-transform duration-300 translate-x-full" id="cart-panel">
+                
+                <!-- Drawer Header -->
+                <div class="p-6 bg-countdown text-white flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-ice"></i>
+                        <h2 class="font-serif text-lg font-bold">YOUR SHOPPING BAG</h2>
+                    </div>
+                    <button onclick="toggleCart(false)" class="text-slate-300 hover:text-white text-xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Drawer Body (Cart Items) -->
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <div class="text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-slate-200"></i>
+                        <p>Your bag is currently empty.</p>
+                    </div>
+                </div>
+
+                <!-- Promo Code Section -->
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <div class="flex gap-2">
+                        <input type="text" id="promo-code" placeholder="Discount code (e.g. LUX34)" class="flex-1 px-3 py-2 border rounded-lg text-xs uppercase focus:outline-none focus:border-carols">
+                        <button onclick="applyPromo()" class="bg-sky text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-countdown transition-colors">Apply</button>
+                    </div>
+                    <p id="promo-msg" class="text-[11px] mt-1 font-semibold"></p>
+                </div>
+
+                <!-- Drawer Footer (Total & Checkout) -->
+                 <div class="p-6 bg-white border-t border-slate-100 space-y-4">
+                    <div class="space-y-1 text-sm">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">$0.00</span>
+                        </div>
+                        <div id="discount-row" class="flex justify-between text-carols hidden">
+                            <span>Discount (30%)</span>
+                            <span id="cart-discount">-$0.00</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-base text-countdown pt-2 border-t">
+                            <span>Total</span>
+                            <span id="cart-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button onclick="checkout()" class="w-full bg-carols hover:bg-celebration text-white py-3.5 rounded-xl font-bold text-xs tracking-wider uppercase transition-colors shadow-lg">
+                        Proceed to Checkout
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
+
