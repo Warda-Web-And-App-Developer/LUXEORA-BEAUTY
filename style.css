@@ -1,0 +1,31 @@
+.hero-slide {
+            transition: opacity 1s ease-in-out;
+        } 
+        /* Custom scrollbar for drawer */
+         ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #679bac;
+            border-radius: 4px;
+        } 
+        .name1{
+            position: relative;
+            right: 130px;
+        }
+        .name2{
+            position: relative;
+            right: 130px;
+        }
+        .brand{
+            position: relative;
+            bottom: 10px;
+        }
+        .name3{
+            position: relative;
+            right: 130px;
+            bottom: -30px;
+        }
+        .name4{
+            top: -40px;
+        }
